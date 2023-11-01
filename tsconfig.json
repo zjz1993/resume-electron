@@ -11,9 +11,18 @@
     "esModuleInterop": true,
     "lib": ["ESNext", "DOM"],
     "skipLibCheck": true,
-    "noEmit": true
+    "noEmit": true,
+    "paths": {
+      "@/*": [
+        "src/*"
+      ],
+      "@assets": [
+        "src/assets/*"
+      ]
+    },
+    "baseUrl": "."
   },
-  "include": ["src"],
+  "include": ["src","eslintrc.js","vite.config.ts"],
   "references": [
     { "path": "./tsconfig.node.json" }
   ]
