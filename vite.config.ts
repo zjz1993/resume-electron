@@ -12,7 +12,8 @@ import Components from 'unplugin-vue-components/vite';
 import { ElementPlusResolver } from 'unplugin-vue-components/resolvers';
 
 // https://vitejs.dev/config/
-export default defineConfig(({ command }) => {
+export default defineConfig((props) => {
+	const { command } = props;
 	rmSync('dist-electron', { recursive: true, force: true });
 
 	const isServe = command === 'serve';

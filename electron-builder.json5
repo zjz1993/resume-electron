@@ -5,7 +5,7 @@
   "$schema": "https://raw.githubusercontent.com/electron-userland/electron-builder/master/packages/app-builder-lib/scheme.json",
   "appId": "YourAppID",
   "asar": true,
-  "productName": "YourAppName",
+  "productName": "易简历",
   "directories": {
     "output": "release/${version}"
   },
@@ -14,32 +14,33 @@
     "dist-electron"
   ],
   "mac": {
+    icon: "build/icon.png",
     "target": [
       "dmg"
     ],
     "artifactName": "${productName}-Mac-${version}-Installer.${ext}"
   },
-  "win": {
-    "target": [
-      {
-        "target": "nsis",
-        "arch": [
-          "x64"
-        ]
-      }
-    ],
-    "artifactName": "${productName}-Windows-${version}-Setup.${ext}"
-  },
+//  "win": {
+//    "target": [
+//      {
+//        "target": "nsis",
+//        "arch": [
+//          "x64"
+//        ]
+//      }
+//    ],
+//    "artifactName": "${productName}-Windows-${version}-Setup.${ext}"
+//  },
   "nsis": {
     "oneClick": false,
     "perMachine": false,
     "allowToChangeInstallationDirectory": true,
     "deleteAppDataOnUninstall": false
   },
-  "linux": {
-    "target": [
-      "AppImage"
-    ],
-    "artifactName": "${productName}-Linux-${version}.${ext}"
-  }
+//  "linux": {
+//    "target": [
+//      "AppImage"
+//    ],
+//    "artifactName": "${productName}-Linux-${version}.${ext}"
+//  }
 }
